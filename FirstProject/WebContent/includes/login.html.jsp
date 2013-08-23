@@ -4,4 +4,4 @@
 		<s:password label="Password" key="password" />
 		<s:submit align="center" value="login"/>
 </s:form>
-not registered? click <s:a href="/FirstProject/register.jsp">here</s:a>!
+not registered? click <a href="register.jsp">here</a>!
