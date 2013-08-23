@@ -1,0 +1,12 @@
+core/model/User.class
+core/dao/UserDAO.class
+core/util/CustomHibernateDaoSupport.class
+core/dao/impl/LoginDAOImpl.class
+core/dao/LoginDAO.class
+core/bo/UserBo.class
+core/bo/impl/UserBoImpl.class
+core/action/RegisterAction.class
+core/action/LoginAction.class
+core/bo/LoginBo.class
+core/bo/impl/LoginBoImpl.class
+core/dao/impl/UserDAOImpl.class
