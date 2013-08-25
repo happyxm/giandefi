@@ -4,7 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	
-	<bean id="user" class="core.model.User"/>
+	<bean id="user" class="core.model.User">
+
+	</bean>
 	
 	<bean id="userBo" class="core.bo.impl.UserBoImpl" >
 		<property name="userDAO" ref="userDAO" />
