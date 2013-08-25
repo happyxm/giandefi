@@ -1,6 +1,10 @@
 package core.action;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.lang3.StringUtils;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -11,20 +15,43 @@ public class RegisterAction extends ActionSupport implements ModelDriven<User>{
 
 	private User user;
 	private UserBo userBo;
-		
+	
+	private static final String EMAIL_PATTERN = 
+			"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+	
 	public void validate()
 	{
 		System.out.println("validating");
 		if (StringUtils.isEmpty(getUser().getUserId()))
 		{
-			addFieldError("userId", "Campo userId vuoto!");
+			addFieldError("userId", "Campo obbligatorio");
 		}
 		if (StringUtils.isEmpty(getUser().getPassword()))
 		{
-			addFieldError("password", "Campo password vuoto!");
+			addFieldError("password", "Campo obbligatorio");
+		}
+		if (StringUtils.isEmpty(getUser().getName()))
+		{
+			addFieldError("name", "Campo obbligatorio");
+		}
+		if (StringUtils.isEmpty(getUser().getSurname()))
+		{
+			addFieldError("surname", "Campo obbligatorio");
+		}
+		if (StringUtils.isEmpty(getUser().getEmail()))
+		{
+			addFieldError("email", "Campo obbligatorio");
+		}
+		Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+		Matcher matcher = pattern.matcher(getUser().getEmail());
+		if (!matcher.matches())
+		{
+			addFieldError("email", "email non valida!");
 		}
 	}
 	
+	@Override
 	public String execute() throws Exception
 	{
 			System.out.println("execute called for user=" + user.getUserId() + " " + " password=" + user.getPassword());

@@ -8,6 +8,6 @@
 <title>ok</title>
 </head>
 <body>
-<h1>Welcome "<s:property value="userId"/>"</h1>
+<h1>Welcome "<s:property value="name"/> <s:property value="surname"/>"</h1>
 </body>
 </html>
