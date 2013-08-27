@@ -8,13 +8,13 @@ import org.apache.commons.lang3.StringUtils;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-import core.bo.UserBo;
+import core.bo.RegisterBo;
 import core.model.User;
 
 public class RegisterAction extends ActionSupport implements ModelDriven<User>{
 
 	private User user;
-	private UserBo userBo;
+	private RegisterBo registerBo;
 	
 	private static final String EMAIL_PATTERN = 
 			"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
@@ -55,7 +55,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<User>{
 	public String execute() throws Exception
 	{
 			System.out.println("execute called for user=" + user.getUserId() + " " + " password=" + user.getPassword());
-			getUserBo().addUser(user);
+			getRegisterBo().addUser(user);
 			return "success";
 	}
 	public User getUser() {
@@ -71,11 +71,15 @@ public class RegisterAction extends ActionSupport implements ModelDriven<User>{
 	@Override
 	public User getModel() {
 		return user;	}
-	public UserBo getUserBo() {
-		return userBo;
+
+	public RegisterBo getRegisterBo() {
+		return registerBo;
 	}
-	public void setUserBo(UserBo userBo) {
-		this.userBo = userBo;
+
+	public void setRegisterBo(RegisterBo registerBo) {
+		this.registerBo = registerBo;
 	}
+	
+
 	
 }

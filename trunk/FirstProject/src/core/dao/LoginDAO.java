@@ -4,6 +4,6 @@ import core.model.User;
 
 public interface LoginDAO {
 
-	boolean verifyLogin(User user);
+	public User verifyLogin(User user);
 
 }
