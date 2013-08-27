@@ -33,7 +33,9 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>{
 		System.out.println("execute user="+user.getUserId() + " pass=" + user.getPassword());
 		if (getLoginBo().verifyLogin(user))
 		{
-			return SUCCESS;
+
+				return SUCCESS;
+		
 		}
 		else return "notregistered";
 	}

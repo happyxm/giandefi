@@ -7,21 +7,25 @@
 
 	<constant name="struts.devMode" value="true" />
  
-	<package name ="default" namespace="/" extends="struts-default">
-	
+	<package name ="user" namespace="/" extends="struts-default">
+
+		<action name="" class="core.action.HomeAction">
+			<result name="success">/user/login.jsp</result>
+		</action>
+
 		<action name="login" class="core.action.LoginAction">
-			<result name="success">/success.jsp</result>
-			<result name="input">/login.jsp</result>
-			<result name="notregistered">/notregistered.jsp</result>
+			<result name="success">/user/success.jsp</result>
+			<result name="login">/user/login.jsp</result>
+			<result name="input">/user/login.jsp</result>
+			<result name="notregistered">/user/notregistered.jsp</result>
+			
 		</action>
 		
 		<action name="register" class="core.action.RegisterAction">
-			<result name="input">/register.jsp</result>
-			<result name="error">/error.jsp</result>
-			<result name="success">/success.jsp</result>
+			<result name="success">/user/success.jsp</result>
+			<result name="input">/user/register.jsp</result>
 		</action>
+		
+		
 	</package>
-	
-	
-	
 </struts>

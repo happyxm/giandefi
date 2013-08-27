@@ -3,7 +3,7 @@ package core.dao;
 import core.model.User;
 
 
-public interface UserDAO {
+public interface RegisterDAO {
 	
 	void addUser(User user);
 

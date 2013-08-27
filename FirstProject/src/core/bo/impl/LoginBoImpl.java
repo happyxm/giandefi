@@ -24,7 +24,7 @@ public class LoginBoImpl implements LoginBo {
 	@Override
 	public boolean verifyLogin(User user)
 	{
-		if (loginDAO.verifyLogin(user))
+		if (loginDAO.verifyLogin(user) != null)
 			return true;
 		else return false;
 	}

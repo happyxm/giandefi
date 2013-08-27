@@ -4,12 +4,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	
-		<bean id="loginAction" class="core.action.LoginAction">
-			<property name="user" ref="user" />
-			<property name="loginBo" ref="loginBo"/>
-		</bean>
-		<bean id="registerAction" class="core.action.RegisterAction">
-			<property name="user" ref="user" />	
-			<property name="userBo" ref="userBo" />	
+	<bean id="loginAction" class="core.action.LoginAction">
+		<property name="user" ref="user" />
+		<property name="loginBo" ref="loginBo"/>
 	</bean>
+	
+	<bean id="registerAction" class="core.action.RegisterAction">
+		<property name="user" ref="user" />	
+		<property name="registerBo" ref="registerBo" />	
+	</bean>
+
+	<bean id="home" class="core.action.HomeAction"/>
 </beans>

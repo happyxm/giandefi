@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 public class User {
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int Id;
+	private int id;
 	private String userId; 
 	private String password;
 	private String name;
@@ -42,11 +42,11 @@ public class User {
 	}
 
 	public int getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(int id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -81,5 +81,12 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	@Override
+	public String toString() {
+		System.out.println("id=" + id + " userId=" + userId + " password=" + password);
+		return super.toString();
+	}
 	
+
 }

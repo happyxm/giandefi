@@ -1,32 +1,39 @@
 package core.dao.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import core.dao.LoginDAO;
 import core.model.User;
 import core.util.CustomHibernateDaoSupport;
 
+	
 @Repository("loginDAO")
 public class LoginDAOImpl extends CustomHibernateDaoSupport implements LoginDAO 
 {
-
+	
+	@SuppressWarnings("unchecked")
 	@Override
-	public boolean verifyLogin(User user)
+	public User verifyLogin(User user)
 	{
-		try
+		String[] params = { user.getUserId(), user.getPassword()};
+		List<User> list = getHibernateTemplate().find("from User where userId=? and password=?", params);
+		if (list.size() == 1)
 		{
-			Integer count = (Integer) getHibernateTemplate().find("count(*) from User where userId='" + user.getUserId() + "' and password='" + user.getPassword()+"'").get(0);
-			if (count != 1)
-			{
-				System.out.println(count);
-				return true;
-			}
+			User u = list.get(0);
+				user.setEmail(u.getEmail());
+				user.setSurname(u.getSurname());
+				user.setName(u.getName());
+				user.setJoinDate(u.getJoinDate());
+				user.setId(u.getId());
+			return (User) getHibernateTemplate().get(core.model.User.class, list.get(0).getId());
 		}
-		catch (Exception e)
+		else
 		{
 			System.out.println("Utente non trovato");
-			return false;
+			return null;
 		}
-		return false;
+
 	}
 }

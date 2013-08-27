@@ -12,7 +12,7 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
  
 	<!-- Beans Declaration -->
 	
-	<import resource="spring/UserBean.xml"/>
+	<import resource="spring/RegisterBean.xml"/>
 	<import resource="spring/LoginBean.xml"/>
 	<import resource="spring/ActionBean.xml"/>
 	

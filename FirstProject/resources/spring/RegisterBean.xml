@@ -8,11 +8,11 @@
 
 	</bean>
 	
-	<bean id="userBo" class="core.bo.impl.UserBoImpl" >
-		<property name="userDAO" ref="userDAO" />
+	<bean id="registerBo" class="core.bo.impl.RegisterBoImpl" >
+		<property name="registerDAO" ref="registerDAO" />
 	</bean>
  
-   	<bean id="userDAO" class="core.dao.impl.UserDAOImpl" >
+   	<bean id="registerDAO" class="core.dao.impl.RegisterDAOImpl" >
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
