@@ -11,6 +11,11 @@ import com.opensymphony.xwork2.ModelDriven;
 import core.bo.RegisterBo;
 import core.model.User;
 
+/**
+ * Action class che si occupa della registrazione dell'utente in un database
+ * @author Gianluca De Filippis
+ *
+ */
 public class RegisterAction extends ActionSupport implements ModelDriven<User>{
 
 	private User user;
@@ -20,6 +25,9 @@ public class RegisterAction extends ActionSupport implements ModelDriven<User>{
 			"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	
+	/**
+	 * controlla se i campi obbligatori sono vuoti e verifica che l'email sia in formato corretto
+	 */
 	public void validate()
 	{
 		System.out.println("validating");

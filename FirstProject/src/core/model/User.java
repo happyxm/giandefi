@@ -3,26 +3,46 @@ package core.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
-@Entity
+/**
+ * Model class che rappresenta un utente
+ * @author Gianluca De Filippis
+ *
+ */
+@Entity @Table(name="USERS")
 public class User {
 	
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id 
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="ID")
 	private int id;
+	
+	@Column(name="USER_ID")
 	private String userId; 
+	
+	@Column(name="PASSWORD")
 	private String password;
+	
+	@Column(name="FIRSTNAME")
 	private String name;
+	
+	@Column(name="LASTNAME")
 	private String surname;
+	
 	@Temporal(value = TemporalType.TIMESTAMP)
+	@Column(name="JOINED")
 	private Date joinDate;
+	
+	@Column(name="EMAIL")
 	private String email;
 
 	public String getPassword() {
@@ -84,8 +104,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		System.out.println("id=" + id + " userId=" + userId + " password=" + password);
-		return super.toString();
+		return super.toString() + "id=" + id + " userId=" + userId + " password=" + password;
 	}
 	
 
