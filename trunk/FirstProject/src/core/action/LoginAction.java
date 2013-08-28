@@ -8,12 +8,19 @@ import com.opensymphony.xwork2.ModelDriven;
 import core.bo.LoginBo;
 import core.model.User;
 
+/**
+ * Action Class che si occupa del login utente
+ * @author Gianluca De Filippis
+ *
+ */
 public class LoginAction extends ActionSupport implements ModelDriven<User>{
 
 	private User user;
 	private LoginBo loginBo;
 
-	
+	/**
+	 * controlla se i campi sono vuoti e nel caso lo notifica all'utente
+	 */
 	public void validate()
 	{
 		System.out.println("validate method called");
@@ -33,9 +40,7 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>{
 		System.out.println("execute user="+user.getUserId() + " pass=" + user.getPassword());
 		if (getLoginBo().verifyLogin(user))
 		{
-
-				return SUCCESS;
-		
+				return SUCCESS;		
 		}
 		else return "notregistered";
 	}
