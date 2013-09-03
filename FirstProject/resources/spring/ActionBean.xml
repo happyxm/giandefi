@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="loginAction" class="core.action.LoginAction">
+		<property name="user" ref="user" />
+		<property name="loginBo" ref="loginBo"/>
+	</bean>
+	
+	<bean id="registerAction" class="core.action.RegisterAction">
+		<property name="user" ref="user" />	
+		<property name="registerBo" ref="registerBo" />	
+	</bean>
+
+	<bean id="registeredUsersAction" class="core.action.RegisteredUsersAction">
+		<property name="user" ref="user" />
+		<property name="list"><list></list></property>	
+		<property name="readBo" ref="readBo" />	
+	</bean>
+	
+	<bean id="home" class="core.action.HomeAction"/>
+</beans>

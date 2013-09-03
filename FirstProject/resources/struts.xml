@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+ 
+	<package name ="user" namespace="/" extends="struts-default">
+
+		<action name="" class="core.action.HomeAction">
+			<result>/user/login.jsp</result>
+		</action>
+
+		<action name="login" class="core.action.LoginAction">
+			<result name="success">/user/success.jsp</result>
+			<result name="login">/user/login.jsp</result>
+			<result name="input">/user/login.jsp</result>
+			<result name="notregistered">/user/notregistered.jsp</result>
+			
+		</action>
+		
+		<action name="register" class="core.action.RegisterAction">
+			<result name="success">/user/success.jsp</result>
+			<result name="input">/user/register.jsp</result>
+		</action>
+		
+		<action name="registeredusers" class="core.action.RegisteredUsersAction">
+			<result name="success">/user/userlist.jsp</result>
+			<result name="notregistered">/user/notregistered.jsp</result>
+		</action>
+	</package>
+</struts>
