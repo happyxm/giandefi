@@ -9,5 +9,13 @@
 </head>
 <body>
 <jsp:include page="/user/includes/login.html.jsp" />
+<p>
+<i>La pagina propone un login ad un'applicazione.</i>
+<ol>
+	<li>Se i campi sono vuoti, l'utente viene notificato dell'errore</li>
+	<li>Se l'utente inserisce userid e password presenti nel database viene indirizzato alla pagina successiva</li>
+	<li>Se l'utente inserisce dati non esistenti nel database gli viene notificato e può registrarsi
+</ol>
+
 </body>
 </html>

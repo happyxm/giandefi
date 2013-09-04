@@ -8,5 +8,13 @@
 </head>
 <body>
 	<jsp:include page="/user/includes/register.html.jsp"/>
+
+	<p>
+	<i>Form di registrazione utente. I dati saranno scritti in un database (attualmente MySQL)</i>
+	<ol>
+		<li>Se i campi sono vuoti, l'utente viene notificato dell'errore</li>
+		<li>L'utente deve inserire una email in formato corretto</li>
+		<li>Da implementare un controllo per verificare l'univocita' dell'email di registrazione</li>
+	</ol>
 </body>
 </html>

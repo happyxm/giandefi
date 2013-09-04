@@ -22,7 +22,7 @@
             <td><c:out value="${user.name}" /></td>
             <td><c:out value="${user.surname}" /></td>
             <td><c:out value="${user.email}" /></td>
-            <td><fmt:formatDate value="${user.joinDate}" pattern="yyyy-MM-dd" /></td>
+            <td><fmt:formatDate value="${user.joinDate}" pattern="yyyy-MM-dd HH:mm" /></td>
         </tr>
     </c:forEach>
 </table>
