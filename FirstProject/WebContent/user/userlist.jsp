@@ -3,7 +3,19 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib prefix="s" uri="/struts-tags" %>
 
-<table border="1">
+<style>
+table
+{
+border-collapse:collapse;
+}
+table, td, th
+{
+border:1px solid black;
+background-color:#EAF2D3;
+}
+</style>
+
+<table>
 	<tr>
 		<th>ID</th>
 		<th>UserId</th>
