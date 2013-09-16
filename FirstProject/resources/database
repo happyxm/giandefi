@@ -1,0 +1,2 @@
+select * from giandefi_db.USERS;
+delete from giandefi_db.USERS where FIRSTNAME != 'test';

@@ -18,7 +18,8 @@
 		<li>Se l'utente inserisce userid e password presenti nel database
 			viene indirizzato alla pagina successiva</li>
 		<li>Se l'utente inserisce dati non esistenti nel database gli
-			viene notificato e può registrarsi
+			viene notificato e può registrarsi</li>
+		<li>Si può provare a loggarsi come user=test pass=test oppure ci si può registrare</li>
 	</ol>
 
 </body>
