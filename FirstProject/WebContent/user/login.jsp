@@ -10,6 +10,7 @@
 </head>
 <body>
 	<h1>Login Form</h1>
+	
 	<jsp:include page="/user/includes/login.html.jsp" />
 	<p>
 		<i>La pagina propone un login ad un'applicazione.</i>
@@ -21,6 +22,5 @@
 			viene notificato e può registrarsi</li>
 		<li>Si può provare a loggarsi come user=test pass=test oppure ci si può registrare</li>
 	</ol>
-
 </body>
 </html>

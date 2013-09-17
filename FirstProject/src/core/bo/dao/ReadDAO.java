@@ -20,4 +20,11 @@ public interface ReadDAO {
 	 */
 	public List<User> getUsers();
 
+	/**
+	 * legge dal database tutti gli utenti con userId ed email specifici
+	 * @param userId
+	 * @param email
+	 * @return
+	 */
+	public List<User> getUsersByUserIdAndMail(String userId, String email);
 }

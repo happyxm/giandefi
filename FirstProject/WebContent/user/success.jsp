@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<title>ok</title>
+<title>Welcome | <s:property value="name"/> <s:property value="surname"/></title>
 </head>
 <body>
 <h1>Welcome "<s:property value="name"/> <s:property value="surname"/>"</h1>

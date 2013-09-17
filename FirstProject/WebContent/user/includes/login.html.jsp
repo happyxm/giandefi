@@ -4,4 +4,5 @@
 		<s:password label="Password" key="password" />
 		<s:submit align="center" value="login"/>
 </s:form>
+<br>
 not registered? click <a href="user/register.jsp">here</a>!

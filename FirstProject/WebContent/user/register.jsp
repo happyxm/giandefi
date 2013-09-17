@@ -21,8 +21,8 @@
 	<ol>
 		<li>Se i campi sono vuoti, l'utente viene notificato dell'errore</li>
 		<li>L'utente deve inserire una email in formato corretto</li>
-		<li>Da implementare un controllo per verificare l'univocita'
-			dell'email di registrazione</li>
+		<li><del>Da implementare un controllo per verificare l'univocita'
+			dell'email di registrazione</del></li>
 	</ol>
 </body>
 </html>

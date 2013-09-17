@@ -9,6 +9,6 @@ import core.model.User;
  */
 public interface RegisterDAO {
 	
-	void addUser(User user);
+	boolean addUser(User user);
 
 }

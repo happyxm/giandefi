@@ -1,6 +1,7 @@
 package core.model;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -19,14 +20,16 @@ import javax.persistence.TemporalType;
  *
  */
 @Entity @Table(name="USERS")
-public class User {
+public class User implements Serializable{
 	
+	private static final long serialVersionUID = 2384917814969908350L;
+
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID")
-	private int id;
+	private long id;
 	
-	@Column(name="USER_ID")
+	@Column(name="USER_ID", unique = true)
 	private String userId; 
 	
 	@Column(name="PASSWORD")
@@ -42,7 +45,7 @@ public class User {
 	@Column(name="JOINED")
 	private Date joinDate;
 	
-	@Column(name="EMAIL")
+	@Column(name="EMAIL", unique = true)
 	private String email;
 
 	public String getPassword() {
@@ -61,11 +64,11 @@ public class User {
 		this.userId = userId;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

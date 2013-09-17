@@ -29,4 +29,10 @@ public class ReadDaoImpl extends CustomHibernateDaoSupport implements ReadDAO {
 		return getHibernateTemplate().find("from User");
 	}
 
+	@Override
+	public List<User> getUsersByUserIdAndMail(String userId, String email) {
+		String[] param = {userId, email};
+		return getHibernateTemplate().find("from User u where u.userId = ? or u.email = ?", param);
+	}
+
 }

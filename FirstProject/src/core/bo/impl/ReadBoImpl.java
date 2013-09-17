@@ -8,7 +8,7 @@ import core.bo.ReadBo;
 import core.bo.dao.ReadDAO;
 import core.model.User;
 
-@Service("loginBo")
+@Service("readBo")
 public class ReadBoImpl implements ReadBo {
 
 	private ReadDAO readDAO;
@@ -24,6 +24,11 @@ public class ReadBoImpl implements ReadBo {
 
 	public void setReadDAO(ReadDAO readDAO) {
 		this.readDAO = readDAO;
+	}
+
+	@Override
+	public List<User> getUsersByUserIdAndMail(String userId, String email) {
+		return readDAO.getUsersByUserIdAndMail(userId, email);
 	}
 
 }

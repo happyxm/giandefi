@@ -15,6 +15,7 @@ import core.model.User;
  */
 public class LoginAction extends ActionSupport implements ModelDriven<User>{
 
+	private static final long serialVersionUID = -7390448343087070245L;
 	private User user;
 	private LoginBo loginBo;
 
@@ -37,7 +38,7 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>{
 	@Override
 	public String execute()
 	{	
-		System.out.println("execute user="+user.getUserId() + " pass=" + user.getPassword());
+		//System.out.println("execute user="+user.getUserId() + " pass=" + user.getPassword());
 		if (getLoginBo().verifyLogin(user))
 		{
 				return SUCCESS;		

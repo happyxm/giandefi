@@ -10,9 +10,18 @@ import core.util.CustomHibernateDaoSupport;
 public class RegisterDAOImpl extends CustomHibernateDaoSupport implements RegisterDAO{
 
 	@Override
-	public void addUser(User user) {
-		getHibernateTemplate().save(user);
-		
+	public boolean addUser(User user)
+	{
+		try
+		{
+			getHibernateTemplate().save(user);
+			return true;
+		}
+		catch (RuntimeException e)
+		{
+			return false;
+		}
+	
 	}
 	
 	

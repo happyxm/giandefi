@@ -13,5 +13,5 @@ public interface RegisterBo {
 	 * Aggiunte un nuovo utente al database
 	 * @param user l'utente da aggiungere al database
 	 */
-	void addUser(User user);
+	boolean addUser(User user);
 }

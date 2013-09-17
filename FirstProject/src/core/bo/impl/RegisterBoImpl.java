@@ -14,9 +14,12 @@ public class RegisterBoImpl implements RegisterBo{
 	private RegisterDAO registerDAO;
 
 	@Override
-	public void addUser(User user) {
-		registerDAO.addUser(user);
-		
+	public boolean addUser(User user) {
+		if (registerDAO.addUser(user))
+		{
+			return true;
+		}
+		else return false;
 	}
 	
 	public void setRegisterDAO(RegisterDAO registerDAO)

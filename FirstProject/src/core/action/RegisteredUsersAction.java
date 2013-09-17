@@ -10,6 +10,7 @@ import core.model.User;
 
 public class RegisteredUsersAction extends ActionSupport implements ModelDriven<User>{
 
+	private static final long serialVersionUID = -5380851873583016562L;
 	private User user;
 	private ReadBo readBo;
 	private List<User> list;
