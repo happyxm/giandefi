@@ -9,7 +9,6 @@ import org.apache.commons.lang3.StringUtils;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-import core.bo.LoginBo;
 import core.bo.ReadBo;
 import core.bo.RegisterBo;
 import core.model.User;
@@ -64,7 +63,6 @@ public class RegisterAction extends ActionSupport implements ModelDriven<User>{
 		}
 	}
 	
-	@SuppressWarnings("unused")
 	@Override
 	public String execute() throws Exception
 	{

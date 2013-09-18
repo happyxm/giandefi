@@ -9,13 +9,13 @@
 <base href="${fn:substring(url, 0, fn:length(url) - fn:length(pageContext.request.requestURI))}${pageContext.request.contextPath}/" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Register</title>
+	<title>Registrazione</title>
 </head>
 <body>
-	<h1>Register Form</h1>
+	<h1>Registrazione</h1>
 	<jsp:include page="/user/includes/register.html.jsp" />
 
-	<p>
+	<div id="container"><p>
 		<i>Form di registrazione utente. I dati saranno scritti in un
 			database (attualmente MySQL)</i>
 	<ol>
@@ -24,5 +24,6 @@
 		<li><del>Da implementare un controllo per verificare l'univocita'
 			dell'email di registrazione</del></li>
 	</ol>
+	</div>
 </body>
 </html>

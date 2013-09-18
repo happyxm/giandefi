@@ -10,9 +10,8 @@
 </head>
 <body>
 	<h1>Login Form</h1>
-	
 	<jsp:include page="/user/includes/login.html.jsp" />
-	<p>
+	<div id="container"><p>
 		<i>La pagina propone un login ad un'applicazione.</i>
 	<ol>
 		<li>Se i campi sono vuoti, l'utente viene notificato dell'errore</li>
@@ -22,5 +21,6 @@
 			viene notificato e può registrarsi</li>
 		<li>Si può provare a loggarsi come user=test pass=test oppure ci si può registrare</li>
 	</ol>
+	</div>
 </body>
 </html>

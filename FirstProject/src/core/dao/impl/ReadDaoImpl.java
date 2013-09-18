@@ -29,6 +29,7 @@ public class ReadDaoImpl extends CustomHibernateDaoSupport implements ReadDAO {
 		return getHibernateTemplate().find("from User");
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<User> getUsersByUserIdAndMail(String userId, String email) {
 		String[] param = {userId, email};
